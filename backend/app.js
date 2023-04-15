@@ -40,6 +40,8 @@ app.use('/api/v1/conversation',conversation)
 
 
 module.exports=app;
+
+app.get("/",(req,res)=>res.send(`<h1>Server is Running.Click <a href=${process.env.FRONTEND_URL}>here</a> to visit frontend/h1>`))
 app.use(ErrorMiddleware)
 
 
